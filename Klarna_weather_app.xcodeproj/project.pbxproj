@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75A13F962AA74543008484BF /* Klarna_weather_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13F952AA74543008484BF /* Klarna_weather_appApp.swift */; };
+		75A13F982AA74543008484BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13F972AA74543008484BF /* ContentView.swift */; };
+		75A13F9A2AA74547008484BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A13F992AA74547008484BF /* Assets.xcassets */; };
+		75A13FC22AA746FA008484BF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FC12AA746FA008484BF /* NetworkManager.swift */; };
+		75A13FC52AA74781008484BF /* WeatherHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FC42AA74781008484BF /* WeatherHomeView.swift */; };
+		75A13FC72AA793D0008484BF /* AnySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FC62AA793D0008484BF /* AnySearchView.swift */; };
+		75A13FCA2AA79FF6008484BF /* AnySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FC92AA79FF6008484BF /* AnySearchViewModel.swift */; };
+		75A13FCF2AA7A11F008484BF /* WeatherHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FCE2AA7A11F008484BF /* WeatherHomeViewModel.swift */; };
+		75A13FD22AA7A225008484BF /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FD12AA7A225008484BF /* LocationResponse.swift */; };
+		75A13FD42AA7A236008484BF /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FD32AA7A236008484BF /* WeatherResponse.swift */; };
+		75A13FD62AA7DB2E008484BF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FD52AA7DB2E008484BF /* API.swift */; };
+		75A13FD82AA7DB5A008484BF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FD72AA7DB5A008484BF /* NetworkError.swift */; };
+		75A13FDB2AA7DB8E008484BF /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FDA2AA7DB8E008484BF /* WeatherService.swift */; };
+		75A13FDF2AA7DF02008484BF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FDE2AA7DF02008484BF /* LocationManager.swift */; };
+		75A13FE72AA9289A008484BF /* WeatherServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FE62AA9289A008484BF /* WeatherServiceTests.swift */; };
+		75A13FE92AA9296B008484BF /* MockNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FE82AA9296B008484BF /* MockNetworkLayer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75A13FA32AA74548008484BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75A13F8A2AA74543008484BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A13F912AA74543008484BF;
+			remoteInfo = Klarna_weather_app;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		75A13F922AA74543008484BF /* Klarna_weather_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Klarna_weather_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A13F952AA74543008484BF /* Klarna_weather_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Klarna_weather_appApp.swift; sourceTree = "<group>"; };
+		75A13F972AA74543008484BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		75A13F992AA74547008484BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75A13FA22AA74548008484BF /* Klarna_weather_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Klarna_weather_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A13FC12AA746FA008484BF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		75A13FC42AA74781008484BF /* WeatherHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHomeView.swift; sourceTree = "<group>"; };
+		75A13FC62AA793D0008484BF /* AnySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySearchView.swift; sourceTree = "<group>"; };
+		75A13FC92AA79FF6008484BF /* AnySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySearchViewModel.swift; sourceTree = "<group>"; };
+		75A13FCE2AA7A11F008484BF /* WeatherHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHomeViewModel.swift; sourceTree = "<group>"; };
+		75A13FD12AA7A225008484BF /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
+		75A13FD32AA7A236008484BF /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		75A13FD52AA7DB2E008484BF /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		75A13FD72AA7DB5A008484BF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		75A13FDA2AA7DB8E008484BF /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		75A13FDE2AA7DF02008484BF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		75A13FE62AA9289A008484BF /* WeatherServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTests.swift; sourceTree = "<group>"; };
+		75A13FE82AA9296B008484BF /* MockNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkLayer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75A13F8F2AA74543008484BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A13F9F2AA74548008484BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75A13F892AA74543008484BF = {
+			isa = PBXGroup;
+			children = (
+				75A13F942AA74543008484BF /* Klarna_weather_app */,
+				75A13FA52AA74548008484BF /* Klarna_weather_appTests */,
+				75A13F932AA74543008484BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75A13F932AA74543008484BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75A13F922AA74543008484BF /* Klarna_weather_app.app */,
+				75A13FA22AA74548008484BF /* Klarna_weather_appTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75A13F942AA74543008484BF /* Klarna_weather_app */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FC32AA7476A008484BF /* Modules */,
+				75A13FBF2AA74574008484BF /* Services */,
+				75A13F952AA74543008484BF /* Klarna_weather_appApp.swift */,
+				75A13F972AA74543008484BF /* ContentView.swift */,
+				75A13F992AA74547008484BF /* Assets.xcassets */,
+			);
+			path = Klarna_weather_app;
+			sourceTree = "<group>";
+		};
+		75A13FA52AA74548008484BF /* Klarna_weather_appTests */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FE52AA9287B008484BF /* ServiceTests */,
+			);
+			path = Klarna_weather_appTests;
+			sourceTree = "<group>";
+		};
+		75A13FBF2AA74574008484BF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FDD2AA7DEF4008484BF /* Location */,
+				75A13FC02AA7457A008484BF /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		75A13FC02AA7457A008484BF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FD92AA7DB74008484BF /* WeatherService */,
+				75A13FDC2AA7DBA8008484BF /* Core */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		75A13FC32AA7476A008484BF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FD02AA7A210008484BF /* Models */,
+				75A13FCD2AA7A0FC008484BF /* WeatherHomeView */,
+				75A13FC82AA79FD0008484BF /* AnySearch */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		75A13FC82AA79FD0008484BF /* AnySearch */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FC62AA793D0008484BF /* AnySearchView.swift */,
+				75A13FC92AA79FF6008484BF /* AnySearchViewModel.swift */,
+			);
+			path = AnySearch;
+			sourceTree = "<group>";
+		};
+		75A13FCD2AA7A0FC008484BF /* WeatherHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FC42AA74781008484BF /* WeatherHomeView.swift */,
+				75A13FCE2AA7A11F008484BF /* WeatherHomeViewModel.swift */,
+			);
+			path = WeatherHomeView;
+			sourceTree = "<group>";
+		};
+		75A13FD02AA7A210008484BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FD12AA7A225008484BF /* LocationResponse.swift */,
+				75A13FD32AA7A236008484BF /* WeatherResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75A13FD92AA7DB74008484BF /* WeatherService */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FDA2AA7DB8E008484BF /* WeatherService.swift */,
+			);
+			path = WeatherService;
+			sourceTree = "<group>";
+		};
+		75A13FDC2AA7DBA8008484BF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FC12AA746FA008484BF /* NetworkManager.swift */,
+				75A13FD52AA7DB2E008484BF /* API.swift */,
+				75A13FD72AA7DB5A008484BF /* NetworkError.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		75A13FDD2AA7DEF4008484BF /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FDE2AA7DF02008484BF /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		75A13FE52AA9287B008484BF /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				75A13FE62AA9289A008484BF /* WeatherServiceTests.swift */,
+				75A13FE82AA9296B008484BF /* MockNetworkLayer.swift */,
+			);
+			path = ServiceTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75A13F912AA74543008484BF /* Klarna_weather_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A13FB62AA74548008484BF /* Build configuration list for PBXNativeTarget "Klarna_weather_app" */;
+			buildPhases = (
+				75A13F8E2AA74543008484BF /* Sources */,
+				75A13F8F2AA74543008484BF /* Frameworks */,
+				75A13F902AA74543008484BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Klarna_weather_app;
+			productName = Klarna_weather_app;
+			productReference = 75A13F922AA74543008484BF /* Klarna_weather_app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75A13FA12AA74548008484BF /* Klarna_weather_appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A13FB92AA74548008484BF /* Build configuration list for PBXNativeTarget "Klarna_weather_appTests" */;
+			buildPhases = (
+				75A13F9E2AA74548008484BF /* Sources */,
+				75A13F9F2AA74548008484BF /* Frameworks */,
+				75A13FA02AA74548008484BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75A13FA42AA74548008484BF /* PBXTargetDependency */,
+			);
+			name = Klarna_weather_appTests;
+			productName = Klarna_weather_appTests;
+			productReference = 75A13FA22AA74548008484BF /* Klarna_weather_appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75A13F8A2AA74543008484BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					75A13F912AA74543008484BF = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					75A13FA12AA74548008484BF = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 75A13F912AA74543008484BF;
+					};
+				};
+			};
+			buildConfigurationList = 75A13F8D2AA74543008484BF /* Build configuration list for PBXProject "Klarna_weather_app" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 75A13F892AA74543008484BF;
+			productRefGroup = 75A13F932AA74543008484BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75A13F912AA74543008484BF /* Klarna_weather_app */,
+				75A13FA12AA74548008484BF /* Klarna_weather_appTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75A13F902AA74543008484BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A13F9A2AA74547008484BF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A13FA02AA74548008484BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75A13F8E2AA74543008484BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A13FD62AA7DB2E008484BF /* API.swift in Sources */,
+				75A13FC22AA746FA008484BF /* NetworkManager.swift in Sources */,
+				75A13FD42AA7A236008484BF /* WeatherResponse.swift in Sources */,
+				75A13F982AA74543008484BF /* ContentView.swift in Sources */,
+				75A13FCF2AA7A11F008484BF /* WeatherHomeViewModel.swift in Sources */,
+				75A13F962AA74543008484BF /* Klarna_weather_appApp.swift in Sources */,
+				75A13FC52AA74781008484BF /* WeatherHomeView.swift in Sources */,
+				75A13FD22AA7A225008484BF /* LocationResponse.swift in Sources */,
+				75A13FC72AA793D0008484BF /* AnySearchView.swift in Sources */,
+				75A13FD82AA7DB5A008484BF /* NetworkError.swift in Sources */,
+				75A13FCA2AA79FF6008484BF /* AnySearchViewModel.swift in Sources */,
+				75A13FDB2AA7DB8E008484BF /* WeatherService.swift in Sources */,
+				75A13FDF2AA7DF02008484BF /* LocationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A13F9E2AA74548008484BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A13FE72AA9289A008484BF /* WeatherServiceTests.swift in Sources */,
+				75A13FE92AA9296B008484BF /* MockNetworkLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75A13FA42AA74548008484BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A13F912AA74543008484BF /* Klarna_weather_app */;
+			targetProxy = 75A13FA32AA74548008484BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		75A13FB42AA74548008484BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		75A13FB52AA74548008484BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75A13FB72AA74548008484BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 36Q8BLK8D3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to fetch the weather data for your area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.safitware.Klarna-weather-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75A13FB82AA74548008484BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 36Q8BLK8D3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to fetch the weather data for your area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.safitware.Klarna-weather-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		75A13FBA2AA74548008484BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36Q8BLK8D3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.safitware.Klarna-weather-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Klarna_weather_app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Klarna_weather_app";
+			};
+			name = Debug;
+		};
+		75A13FBB2AA74548008484BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36Q8BLK8D3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.safitware.Klarna-weather-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Klarna_weather_app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Klarna_weather_app";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75A13F8D2AA74543008484BF /* Build configuration list for PBXProject "Klarna_weather_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A13FB42AA74548008484BF /* Debug */,
+				75A13FB52AA74548008484BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75A13FB62AA74548008484BF /* Build configuration list for PBXNativeTarget "Klarna_weather_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A13FB72AA74548008484BF /* Debug */,
+				75A13FB82AA74548008484BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75A13FB92AA74548008484BF /* Build configuration list for PBXNativeTarget "Klarna_weather_appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A13FBA2AA74548008484BF /* Debug */,
+				75A13FBB2AA74548008484BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75A13F8A2AA74543008484BF /* Project object */;
+}
