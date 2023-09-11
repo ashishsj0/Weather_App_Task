@@ -16,9 +16,9 @@ enum LocationError: Error {
     case generic
 }
 
-final class LocationManager: NSObject, ObservableObject {
+final class CoreLocationManager: NSObject, ObservableObject {
     
-    static let shared = LocationManager()
+    static let shared = CoreLocationManager()
     
     private var locationManager: CLLocationManager
     
@@ -74,7 +74,7 @@ final class LocationManager: NSObject, ObservableObject {
 
 //MARK: Location Manager Delegates
 
-extension LocationManager: CLLocationManagerDelegate {
+extension CoreLocationManager: CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         

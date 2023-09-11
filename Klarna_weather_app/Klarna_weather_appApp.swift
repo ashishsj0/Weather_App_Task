@@ -21,7 +21,7 @@ struct Klarna_weather_appApp: App {
                     
                     if phase == .background {
                         
-                        LocationManager.shared.stopLocationServices()
+                        CoreLocationManager.shared.stopLocationServices()
                     }
                 }
         }

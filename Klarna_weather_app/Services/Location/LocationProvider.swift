@@ -20,10 +20,10 @@ class LocationProvider: ObservableObject {
     
     @Published var error: Error?
 
-    private let locationManager: LocationManager
+    private let locationManager: CoreLocationManager
     private var cancellables: Set<AnyCancellable> = []
 
-    init(locationManager: LocationManager = .shared) {
+    init(locationManager: CoreLocationManager = .shared) {
         
         self.locationManager = locationManager
         observeLocationManager()
