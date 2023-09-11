@@ -23,6 +23,9 @@
 		75A13FDF2AA7DF02008484BF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FDE2AA7DF02008484BF /* LocationManager.swift */; };
 		75A13FE72AA9289A008484BF /* WeatherServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FE62AA9289A008484BF /* WeatherServiceTests.swift */; };
 		75A13FE92AA9296B008484BF /* MockNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A13FE82AA9296B008484BF /* MockNetworkLayer.swift */; };
+		75C3D1A62AAFA7F1007FD6F0 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C3D1A52AAFA7F1007FD6F0 /* LocationProvider.swift */; };
+		75C3D1A92AAFA852007FD6F0 /* UnitTemperature+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C3D1A82AAFA852007FD6F0 /* UnitTemperature+Ext.swift */; };
+		75C3D1AB2AAFB331007FD6F0 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C3D1AA2AAFB331007FD6F0 /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		75A13FDE2AA7DF02008484BF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		75A13FE62AA9289A008484BF /* WeatherServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTests.swift; sourceTree = "<group>"; };
 		75A13FE82AA9296B008484BF /* MockNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkLayer.swift; sourceTree = "<group>"; };
+		75C3D1A52AAFA7F1007FD6F0 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
+		75C3D1A82AAFA852007FD6F0 /* UnitTemperature+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnitTemperature+Ext.swift"; sourceTree = "<group>"; };
+		75C3D1AA2AAFB331007FD6F0 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 		75A13F942AA74543008484BF /* Klarna_weather_app */ = {
 			isa = PBXGroup;
 			children = (
+				75C3D1A72AAFA83B007FD6F0 /* Extensions */,
 				75A13FC32AA7476A008484BF /* Modules */,
 				75A13FBF2AA74574008484BF /* Services */,
 				75A13F952AA74543008484BF /* Klarna_weather_appApp.swift */,
@@ -163,6 +170,7 @@
 			children = (
 				75A13FD12AA7A225008484BF /* LocationResponse.swift */,
 				75A13FD32AA7A236008484BF /* WeatherResponse.swift */,
+				75C3D1AA2AAFB331007FD6F0 /* WeatherData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				75A13FDE2AA7DF02008484BF /* LocationManager.swift */,
+				75C3D1A52AAFA7F1007FD6F0 /* LocationProvider.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -200,6 +209,14 @@
 				75A13FE82AA9296B008484BF /* MockNetworkLayer.swift */,
 			);
 			path = ServiceTests;
+			sourceTree = "<group>";
+		};
+		75C3D1A72AAFA83B007FD6F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75C3D1A82AAFA852007FD6F0 /* UnitTemperature+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,11 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C3D1A92AAFA852007FD6F0 /* UnitTemperature+Ext.swift in Sources */,
 				75A13FD62AA7DB2E008484BF /* API.swift in Sources */,
 				75A13FC22AA746FA008484BF /* NetworkManager.swift in Sources */,
 				75A13FD42AA7A236008484BF /* WeatherResponse.swift in Sources */,
 				75A13F982AA74543008484BF /* ContentView.swift in Sources */,
 				75A13FCF2AA7A11F008484BF /* WeatherHomeViewModel.swift in Sources */,
+				75C3D1AB2AAFB331007FD6F0 /* WeatherData.swift in Sources */,
 				75A13F962AA74543008484BF /* Klarna_weather_appApp.swift in Sources */,
 				75A13FC52AA74781008484BF /* WeatherHomeView.swift in Sources */,
 				75A13FD22AA7A225008484BF /* LocationResponse.swift in Sources */,
@@ -314,6 +333,7 @@
 				75A13FCA2AA79FF6008484BF /* AnySearchViewModel.swift in Sources */,
 				75A13FDB2AA7DB8E008484BF /* WeatherService.swift in Sources */,
 				75A13FDF2AA7DF02008484BF /* LocationManager.swift in Sources */,
+				75C3D1A62AAFA7F1007FD6F0 /* LocationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

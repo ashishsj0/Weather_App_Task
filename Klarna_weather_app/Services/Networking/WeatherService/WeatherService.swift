@@ -8,16 +8,32 @@
 import Foundation
 import Combine
 
-class WeatherService {
+protocol WeatherServiceConfigurable {
     
-    private let networkLayer: Networkable
-    private var apiKey: String { "" }
-    // this should be somewhere safe, not in source code, but bear with it for now. :)
+    var networkLayer: Networkable { get set }
+    var apiKey: String { get set }
+}
+
+protocol AnyWeatherService: WeatherServiceConfigurable {
     
-    init(networkLayer: Networkable = BaseNetworkLayer()) {
+    func fetchTemperature(latitude: Double, longitude: Double) -> AnyPublisher<Measurement<UnitTemperature>, Error>
+    func fetchLocations(for city: String) -> AnyPublisher<[LocationResponse], Error>
+}
+
+class WeatherService: AnyWeatherService {
+    
+    internal var networkLayer: Networkable
+    internal var apiKey: String
+    
+    // apiKey should be somewhere safe, not in source code, but bear with it for now. :)
+    
+    init(networkLayer: Networkable = BaseNetworkLayer(), apiKey: String = "") {
         
         self.networkLayer = networkLayer
+        self.apiKey = apiKey
     }
+    
+    /// Fetches temperature for given `latitude` and `longitude`
     
     func fetchTemperature(latitude: Double, longitude: Double) -> AnyPublisher<Measurement<UnitTemperature>, Error> {
         
@@ -30,12 +46,17 @@ class WeatherService {
             .eraseToAnyPublisher()
     }
     
+    /// Fetches location for a given `city`.
+    
     func fetchLocations(for city: String) -> AnyPublisher<[LocationResponse], Error> {
         
         return performRequest(for: .geocoding(city: city, limit: 5))
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
+}
+
+extension WeatherService {
     
     private func performRequest<T: Decodable>(for apiPath: APIPath) -> AnyPublisher<T, Error> {
         

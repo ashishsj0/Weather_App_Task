@@ -12,11 +12,52 @@ struct WeatherHomeView: View {
     
     @ObservedObject private var viewModel = WeatherHomeViewModel()
     
+    var body: some View {
+            
+            NavigationView {
+                
+                VStack(spacing: 16) {
+                    
+                    currentCityDetails
+                        .foregroundColor(.primary)
+                    
+                    showSearchButton
+                    
+                    Spacer()
+                }
+                .padding()
+            }
+            .sheet(isPresented: $viewModel.shouldShowLocationSearch, content: {
+                
+                AnySearchView(viewModel: viewModel.locationSearchViewModel)
+            })
+            .alert(isPresented: $viewModel.showError) {
+                
+                Alert(title: Text("Error"),
+                      message: Text(viewModel.error?.localizedDescription ?? "Unknown error"),
+                      dismissButton: .default(Text("Ok")))
+            }
+    }
+    
+    //MARK: Subviews
+    
+    @ViewBuilder private var showSearchButton: some View {
+        
+        Button(action: {
+            
+            self.showSearch()
+        }, label: {
+            
+            Text("Search for Location")
+                .foregroundColor(.accentColor)
+        })
+    }
+    
     @ViewBuilder private var currentCityDetails: some View {
         
         HStack {
             
-            if let cityName = viewModel.city?.name {
+            if let cityName = viewModel.weatherData.city?.name {
                 
                 Text(cityName)
             }
@@ -38,7 +79,7 @@ struct WeatherHomeView: View {
         
         HStack(spacing: 2) {
             
-            Text(viewModel.temperature)
+            Text(viewModel.weatherData.temperature)
                 .bold()
                 .onTapGesture {
                     
@@ -46,40 +87,8 @@ struct WeatherHomeView: View {
                 }
         }
     }
-    
-    var body: some View {
-            
-            NavigationView {
-                
-                VStack(spacing: 16) {
-                    
-                    currentCityDetails
-                        .foregroundColor(.primary)
-                    
-                    Button(action: {
-                        
-                        self.showSearch()
-                    }, label: {
-                        
-                        Text("Search for Location")
-                            .foregroundColor(.accentColor)
-                    })
-                    
-                    Spacer()
-                }
-                .padding()
-            }
-            .sheet(isPresented: $viewModel.shouldShowLocationSearch, content: {
-                
-                AnySearchView(viewModel: viewModel.locationSearchViewModel)
-            })
-            .alert(isPresented: $viewModel.showError) {
-                
-                Alert(title: Text("Error"),
-                      message: Text(viewModel.error?.localizedDescription ?? "Unknown error"),
-                      dismissButton: .default(Text("Ok")))
-            }
-    }
+
+    //MARK: methods
     
     private func onUnitTap() {
         

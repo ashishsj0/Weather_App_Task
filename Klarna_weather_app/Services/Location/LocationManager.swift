@@ -20,18 +20,30 @@ final class LocationManager: NSObject, ObservableObject {
     
     static let shared = LocationManager()
     
-    private var locationManager = CLLocationManager()
+    private var locationManager: CLLocationManager
     
     @Published var currentLocation: LocationResponse?
     @Published var error: Error?
     
     private override init() {
         
+        self.locationManager = CLLocationManager()
         super.init()
+        setupLocationManager()
+    }
+    
+    /// Configure the location manager.
+    
+    private func setupLocationManager() {
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
-    
+
+    /// Starts updating device location.
+    ///
+    /// This function checks the Location auth status and starts updating location if status is`.authorizedAlways, .authorizedWhenInUse`, requests access if `notDetermined`.
+
     func startLocationServices() {
         
         self.error = nil
@@ -52,12 +64,15 @@ final class LocationManager: NSObject, ObservableObject {
         }
     }
     
+    /// Stops updating device location.
+    
     func stopLocationServices() {
         
         self.locationManager.stopUpdatingLocation()
     }
 }
 
+//MARK: Location Manager Delegates
 
 extension LocationManager: CLLocationManagerDelegate {
     

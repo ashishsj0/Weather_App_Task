@@ -10,6 +10,28 @@ import SwiftUI
 struct AnySearchView<T: AnySearchSelectable>: View {
     
     @ObservedObject var viewModel: AnySearchViewModel<T>
+        
+    var body: some View {
+                
+            VStack(spacing: 16) {
+                
+                SearchBarView(searchText: $viewModel.searchText)
+                    .padding(.top, 8)
+                
+                resultView
+                
+                Spacer()
+            }
+            .navigationBarTitle(viewModel.pageTitle , displayMode: .inline)
+            .alert(isPresented: $viewModel.showError) {
+                
+                Alert(title: Text("Error"),
+                      message: Text(viewModel.error?.localizedDescription ?? "Unknown error"),
+                      dismissButton: .default(Text("Ok")))
+            }
+    }
+    
+    //MARK: Subviews
     
     @ViewBuilder private var emptyView: some View {
         
@@ -47,25 +69,6 @@ struct AnySearchView<T: AnySearchSelectable>: View {
             
             searchResult
         }
-    }
-    
-    var body: some View {
-                
-            VStack(spacing: 16) {
-                
-                SearchBarView(searchText: $viewModel.searchText)
-                
-                resultView
-                
-                Spacer()
-            }
-            .navigationBarTitle(viewModel.pageTitle , displayMode: .inline)
-            .alert(isPresented: $viewModel.showError) {
-                
-                Alert(title: Text("Error"),
-                      message: Text(viewModel.error?.localizedDescription ?? "Unknown error"),
-                      dismissButton: .default(Text("Ok")))
-            }
     }
 }
 
